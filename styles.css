@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    font-family: Mulish-Light;
+}
+@font-face {
+    font-family:Mulish-Bold ;
+    src: url(Mulish-ExtraBold.ttf);
+}
+@font-face {
+    font-family:Mulish-Light;
+    src: url(Mulish-Light.ttf);
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+    background-color: steelblue;
+}
+.container{
+    background-color: rgba(0,0,0,0.4);
+    padding:20px 40px;
+    border-radius:5px;
+    color:white;
+}
+label{
+    display: block;
+}
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Mulish-Light;
+    font-weight: 700;
+}
+input{
+background-color: transparent;
+outline: 0;
+border:0;
+border-bottom: 1.5px solid white;
+width:100%;
+color:white;
+font-size: 18px;
+}
+input:focus{
+    border-bottom-color:lightblue;
+}
+.form-control{
+    margin: 20px 0 30px;
+    position: relative;
+}
+a{
+    text-decoration:none ;
+    color:lightblue;
+    margin-left: 5px;
+}a:clicked{
+    color:lightblue;
+}
+button{
+    width:100%;
+    padding:10px 0;
+    background-color: lightblue;
+    border-width: 0px;
+    border-radius: 5px;
+    margin:20px 0 30px;
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    transform: scale(.98);
+}
+.form-control label{
+    position: absolute;
+    top:-5px;
+    left:0px;
+}
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width:5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+}
+.form-control input:focus + label span{
+    color:lightblue;
+    transform: translateY(-20px);
+}
